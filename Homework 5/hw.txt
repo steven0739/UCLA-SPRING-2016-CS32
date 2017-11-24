@@ -1,0 +1,71 @@
+1-1.
+								50
+					20						60
+			10				40					70
+			    15		            30					   65        80
+					      25       35					   75
+
+1-2.
+								50
+					25						60
+			10				40					70
+			    15		            35					   65        80
+					             				      75
+
+1-3.
+in order: 10 15 20 25 30 35 40 50 60 65 70 75 80
+post order: 15 10 25 35 30 40 20 65 75 80 70 60 50
+pre order: 50 20 10 15 40 30 25 35 60 70 65 80 75
+
+2-1.
+struct Node
+{
+	int data;
+	Node* parent;
+	Node* left;
+	Node* right;
+};
+
+2-2.
+initially set p to the root, and parent to nullptr;
+insert(Node*&p , Node* parent, int val)if p is NULL, 
+	set p to point a new node, whose data is set to val, and whose parent pointer area is set to parent, and whose left and right children are set to null;
+else if val is smaller than p’s data
+		insert(Node*& p->left, Node* p, int val)
+else if val is larger than p’s data
+		insert(Node*& p->right, Node* p, int val)
+
+3-1.
+					7
+		  3						6
+           0              1				4
+
+3-2.
+[7, 3, 6, 0, 1, 4]
+
+3-3.
+[6, 3, 4, 0, 1]
+
+4-1.
+O(C + S)
+
+4-2.
+O(logC + S)
+
+4-3.
+O(logC + logS)
+
+4-4.
+O(logS)
+
+4-5.
+O(1)
+
+4-6.
+O(logC + S)
+
+4-7.
+O(S*logS)
+
+4-8.
+O(C*logS)
